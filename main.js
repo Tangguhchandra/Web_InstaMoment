@@ -31,7 +31,7 @@ document.getElementById("toggleButton").addEventListener("click", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() { // Pastikan script berjalan setelah halaman dimuat
-    var orderButton = document.getElementById("order");
+    var orderButton = document.getElementById("orderr");
 
     if (orderButton) {
         orderButton.addEventListener("click", function() {
