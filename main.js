@@ -30,6 +30,27 @@ document.getElementById("toggleButton").addEventListener("click", function() {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function() { // Pastikan script berjalan setelah halaman dimuat
+    var orderButton = document.getElementById("order");
+
+    if (orderButton) {
+        orderButton.addEventListener("click", function() {
+            console.log("Tombol diklik!"); // Debugging (cek di console)
+            
+            var phoneNumber = "6285700427216"; // Ganti dengan nomor WhatsApp (tanpa +)
+            var message = "Halo Kak, saya mau Order😁!"; // Pesan otomatis
+            
+            // Encode pesan agar sesuai format URL
+            var encodedMessage = encodeURIComponent(message);
+            
+            // Redirect ke WhatsApp
+            window.location.href = "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
+        });
+    } else {
+        console.log("Tombol tidak ditemukan!"); // Cek apakah ID salah
+    }
+});
+
 // nav bar
 
 let ul = document.querySelector("ul");
