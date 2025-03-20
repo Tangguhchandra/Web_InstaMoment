@@ -18,6 +18,17 @@ col_btn.forEach((btn,index)=>{
     })
 })
 
+document.getElementById("toggleButton").addEventListener("click", function() {
+    var tab = document.getElementById("serviceTab");
+    
+    if (tab.classList.contains("show")) {
+        tab.classList.remove("show"); // Sembunyikan dengan animasi
+        setTimeout(() => { tab.style.display = "none"; }, 300); // Delay agar animasi selesai dulu
+    } else {
+        tab.style.display = "block"; // Tampilkan tab
+        setTimeout(() => { tab.classList.add("show"); }, 10); // Tambahkan animasi setelah tampil
+    }
+});
 
 // nav bar
 
